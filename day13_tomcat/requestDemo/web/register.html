@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                var username = $(this).val();
+                $.get("findUserServlet",{username:username},function (data) {
+                    var s = $("#susername");
+                    if (data.isExit){
+
+                    }else {
+
+                    }
+                },"json");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="username" name="username" placeholder="请输入用户名"><br>
+        <span id="susername"></span>
+        <input type="text" name="username" placeholder="请输入用户名"><br>
+        <input type="text" name="username" placeholder="请输入用户名"><br>
+    </form>
+</body>
+</html>
